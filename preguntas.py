@@ -37,7 +37,8 @@ def pregunta_01():
     #print(Datos[:2])
 
     
-
+    result = sum([int(x[1]) for x in Datos)
+           
     """
     Retorne la suma de la segunda columna.
 
@@ -45,7 +46,7 @@ def pregunta_01():
     214
 
     """
-    return z
+    return result
 
 
 #print("Pregunta 2")
