@@ -26,6 +26,9 @@ with open("data.csv", "r") as file:
     Datos = file.readlines()
 Datos
 
+Datos = [line.replace("\t", ",") for line in Datos] # reemplazo los \t por comas
+Datos = [line.replace("\n", "") for line in Datos] # reemplazo los \n por vacios
+
 def pregunta_01():
             ## luego de cargados los datos, los abro y los cargo a la variable Datos
     with open("data.csv", "r") as file:
