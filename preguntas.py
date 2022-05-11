@@ -19,7 +19,12 @@ para probar las preguntas :
 python3 tests.py 01
 
 """
-
+   with open("data.csv", "r") as file:
+    #with open("/tmp/data.csv", "r") as file: #para leer directamente en colab
+    # with open("C:/Users/Usuario/Documents/GitHub/programacion-en-python-jdlodonog/data.csv", newline="") as file: # para leer en directorio local desde el github
+    # with open("https://github.com/ciencia-de-los-datos/programacion-en-python-jdlodonog/blob/main/data.csv", newline="") as file: #pare leer directamente en la web
+        Datos = file.readlines()
+    Datos
 
 def pregunta_01():
             ## luego de cargados los datos, los abro y los cargo a la variable Datos
@@ -54,9 +59,26 @@ def pregunta_01():
 #print("Pregunta 2")
 
 def pregunta_02():
+    from collections import Counter
 
- 
+    aux = [letra[0] for letra in Datos]
+    print(aux)
+    counter = list(Counter(aux).items()) 
+    print(counter)
+    counter.sort()
+    print(counter)
+    letra=[]
+    numero=[]
 
+    for item in counter: 
+        print("{},{}".format(item[0],item[1]))    
+        #print("{},{}".format(i,np.sum(i == N))) 
+        letra.append(item[0])
+        numero.append(item[1])
+           
+       # listaRespuesta2.append(item[1])
+        
+    listaRespuesta=list(zip(letra,numero)) 
 
     """
     Retorne la cantidad de registros por cada letra de la primera columna como la lista
@@ -72,7 +94,7 @@ def pregunta_02():
     ]
 
     """
-    return 
+    return listaRespuesta
 
 
 def pregunta_03():
