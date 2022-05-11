@@ -125,6 +125,8 @@ def pregunta_03():
                 #print( i+ " " + str(sumaLetras))           
                 #print("Letra "+ str(i) + " valor= "+ str(sumaLetras))
         print(vfinal2)
+        x=0
+        b=[]
         b= [int(x) for x in vfinal2] 
         z=sum(b)
         print(z)
