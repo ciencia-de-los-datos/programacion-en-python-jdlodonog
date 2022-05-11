@@ -191,14 +191,12 @@ def pregunta_04():
     
     for j in Datos: 
         print(j)
-        y=j[10:12]
-        print(y)
-        x=item1[3][6:8]
-        print(x)
+        y=j[9:11]
+        print(y)       
         #print(item1[3][6:])
         
-        month = item1[3][6:8]
-        #print("Mes"+ month)
+        month = item1[9:11]
+        print("Mes"+ month)
         #print(month)
         suma[month] +=1
         #print(suma)
