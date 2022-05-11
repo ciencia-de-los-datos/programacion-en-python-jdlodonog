@@ -101,6 +101,14 @@ def pregunta_02():
 
 
 def pregunta_03():
+    with open("data.csv", "r") as file:
+         Datos = file.readlines()
+    Datos   
+    Datos = [line.replace("\t", ",") for line in Datos] 
+    Datos = [line.replace("\n", "") for line in Datos]
+    
+    
+    
     
     letters_list = ["A", "B", "C", "D", "E"]
     #print(Datos[0:])
