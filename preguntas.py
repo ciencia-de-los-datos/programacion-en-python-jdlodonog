@@ -101,29 +101,44 @@ def pregunta_02():
 
 
 def pregunta_03():
-    from collections import Counter
-    
-    listResp3=[]    
-    suma = Counter()
+    letters_list= sorted(list(set([i[0] for i in Datos[0:]])))     
+    print(letters_list)
+    sumaLetras=0
+    valor=0
+
+    vfinal=[]
+    vfinal2=[]
     letra=[]
-    numero=[]
+    for i in letters_list:  
+        print("Letra " + i)  
+        sumaLetras=0
+        for j in Datos:        
+            if i[0]== j[0]:   
+                       
+                valor= int(j[1])
+                #print(i +  "= " + j[1] ) 
+                #print(str(valor))
+                sumaLetras+= valor      
+                
+                #print( i+ " " + str(sumaLetras))           
+                #print("Letra "+ str(i) + " valor= "+ str(sumaLetras))
+    
+        #print("  ") 
+        vfinal.append(sumaLetras)
+        #print(i +" "+ str(sumaLetras)) 
+    print(vfinal)     
 
-    for item in Datos: 
-        x=0
-        y=0
-        x=item[0]
-        y=item[1]
-        suma[item[0]] += y
-    suma = list(suma.items())
-    suma.sort()
+    b= [int(x) for x in vfinal]     #esto convierte la lista resultante en int
+    # vfinal.append()
+    sumaLetras1=sumaLetras
+    vfinal.append(sumaLetras)
+    print("Letra " +  str(i) + " " + str(sumaLetras1))  
+    sumaLetras=0
 
-    for item in suma: 
-        print("{},{}".format(item[0],item[1]))
-        letra.append(item[0])
-        numero.append(item[1])       
+    print(vfinal)
 
-    listResp3=list(zip(letra,int(numero)))
-    print(listResp3)
+    listaRespuesta3=list(zip(letters_list, vfinal))
+    print(listaRespuesta3)  
     """
     Retorne la suma de la columna 2 por cada letra de la primera columna como una lista
     de tuplas (letra, suma) ordendas alfabeticamente.
@@ -138,7 +153,7 @@ def pregunta_03():
     ]
 
     """
-    return listResp3
+    return listaRespuesta3
 
 
 def pregunta_04():
