@@ -194,10 +194,10 @@ def pregunta_04():
         print(item1[3][5:])
         
         month = item[3][5:7]
-        "print("Mes"+ month)
-        "print(month)
+        #print("Mes"+ month)
+        #print(month)
         suma[month] +=1
-        "print(suma)
+        #print(suma)
 
     suma=list(suma.items())
     suma.sort()
