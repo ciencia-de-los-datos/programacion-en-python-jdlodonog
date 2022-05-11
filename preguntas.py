@@ -112,7 +112,7 @@ def pregunta_03():
         x=0
         y=0
         x=item[0]
-        y=int(item[1])
+        y=item[1]
         suma[item[0]] += y
     suma = list(suma.items())
     suma.sort()
