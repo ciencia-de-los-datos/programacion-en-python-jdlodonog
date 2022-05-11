@@ -101,7 +101,7 @@ def pregunta_02():
 
 
 def pregunta_03():
-    """
+    
     #letters_list = ["A", "B", "C", "D", "E"]
     letters_list= sorted(list(set([i[0] for i in Datos[0:]])))     
     print(letters_list)
@@ -128,7 +128,7 @@ def pregunta_03():
         print(vfinal2)
         x=0
         b=[]
-        b= [int(x) for x in vfinal2] 
+        b= [int(x[0]for x in vfinal2] 
         z=sum(b)
         print(z)
         #print("  ") 
@@ -142,7 +142,7 @@ def pregunta_03():
 
     listaRespuesta3=list(zip(letters_list, vfinal))
     print(listaRespuesta3)    
-    """
+    
     
     """
     Retorne la suma de la columna 2 por cada letra de la primera columna como una lista
