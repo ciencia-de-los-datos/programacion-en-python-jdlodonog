@@ -124,8 +124,8 @@ def pregunta_03():
         sumaLetras=0
         vfinal2=[]
         for j in Datos:  
-            print(j)
-            print(j[0]+" - "+ j[2])            
+            "print(j)
+            "print(j[0]+" - "+ j[2])            
             
             if i== j[0]:
                 print("entre en el if")
@@ -137,7 +137,7 @@ def pregunta_03():
                 
                 #print( i+ " " + str(sumaLetras))           
                 #print("Letra "+ str(i) + " valor= "+ str(sumaLetras))
-        print("imprimeindo valor final")
+        print("imprimeindo valor final2")
         print(vfinal2)
         x=0
         b=[]
