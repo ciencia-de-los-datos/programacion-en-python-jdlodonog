@@ -102,8 +102,9 @@ def pregunta_02():
 
 def pregunta_03():
     
-    #letters_list = ["A", "B", "C", "D", "E"]
-    letters_list= sorted(list(set([i[0] for i in Datos[0:]])))     
+    letters_list = ["A", "B", "C", "D", "E"]
+    print(Datos[0:])
+    #letters_list= sorted(list(set([i[0] for i in Datos[0:]])))     
     print(letters_list)
     sumaLetras=0
     valor=0
