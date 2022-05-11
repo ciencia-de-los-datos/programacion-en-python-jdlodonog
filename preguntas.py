@@ -182,7 +182,7 @@ def pregunta_04():
      
     Datos = [line.replace("\t", ",") for line in Datos] 
     Datos = [line.replace("\n", "") for line in Datos]
-    print(Datos[3:])
+    print(Datos[:3])
     suma = Counter()
     #El Counter puede ir agregando elementos  usando formas de diccionarios 
 
