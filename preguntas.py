@@ -189,9 +189,9 @@ def pregunta_04():
     meses=[]
     numeros=[]
     
-    for item1 in Datos: 
-        print(item1)
-        y=item1[3]
+    for j in Datos: 
+        print(j)
+        y=j[10:12]
         print(y)
         x=item1[3][6:8]
         print(x)
