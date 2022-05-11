@@ -191,13 +191,13 @@ def pregunta_04():
     
     for item1 in Datos: 
         print(item1)
-        y=item[3]
+        y=item1[3]
         print(y)
         x=item1[3][6:8]
         print(x)
         #print(item1[3][6:])
         
-        month = item[3][6:8]
+        month = item1[3][6:8]
         #print("Mes"+ month)
         #print(month)
         suma[month] +=1
