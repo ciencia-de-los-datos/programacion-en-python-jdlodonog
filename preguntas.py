@@ -125,13 +125,13 @@ def pregunta_03():
         vfinal2=[]
         for j in Datos:  
             print(j)
-            print(j[0]+" - "+ j[1])            
+            print(j[0]+" - "+ j[2])            
             
             if i== j[0]:
                 print("entre en el if")
                 #valor= int(float(j[1]))
-                vfinal2.append(j[1])
-                #print(i +  "= " + j[1] ) 
+                vfinal2.append(j[2])
+                #print(i +  "= " + j[2] ) 
                 #print(str(valor))
                 #sumaLetras+= valor     
                 
