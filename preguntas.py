@@ -115,7 +115,7 @@ def pregunta_03():
         for j in Datos:        
             if i[0]== j[0]:   
                        
-                valor= int(j[1])
+                valor= int(float(j[1]))
                 #print(i +  "= " + j[1] ) 
                 #print(str(valor))
                 sumaLetras+= valor      
