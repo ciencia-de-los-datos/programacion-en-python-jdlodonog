@@ -101,6 +101,7 @@ def pregunta_02():
 
 
 def pregunta_03():
+    #letters_list = ["A", "B", "C", "D", "E"]
     letters_list= sorted(list(set([i[0] for i in Datos[0:]])))     
     print(letters_list)
     sumaLetras=0
@@ -112,33 +113,32 @@ def pregunta_03():
     for i in letters_list:  
         print("Letra " + i)  
         sumaLetras=0
+        vfinal2=[]
         for j in Datos:        
-            if i[0]== j[0]:   
-                       
-                valor= int(float(j[1]))
+            if i[0]== j[0]:                          
+                #valor= int(float(j[1]))
+                vfinal2.append(j[1])
                 #print(i +  "= " + j[1] ) 
                 #print(str(valor))
-                sumaLetras+= valor      
+                #sumaLetras+= valor     
                 
                 #print( i+ " " + str(sumaLetras))           
                 #print("Letra "+ str(i) + " valor= "+ str(sumaLetras))
-    
+        print(vfinal2)
+        b= [int(x) for x in vfinal2] 
+        z=sum(b)
+        print(z)
         #print("  ") 
-        vfinal.append(sumaLetras)
-        #print(i +" "+ str(sumaLetras)) 
-    print(vfinal)     
-
-    b= [int(x) for x in vfinal]     #esto convierte la lista resultante en int
-    # vfinal.append()
-    sumaLetras1=sumaLetras
-    vfinal.append(sumaLetras)
-    print("Letra " +  str(i) + " " + str(sumaLetras1))  
-    sumaLetras=0
+        vfinal.append(z)
+        print(i +" "+ str(z)) 
+    print(vfinal)  
+   
+    print("Letra " +  str(i) + " " + str(z))      
 
     print(vfinal)
 
     listaRespuesta3=list(zip(letters_list, vfinal))
-    print(listaRespuesta3)  
+    print(listaRespuesta3)    
     """
     Retorne la suma de la columna 2 por cada letra de la primera columna como una lista
     de tuplas (letra, suma) ordendas alfabeticamente.
