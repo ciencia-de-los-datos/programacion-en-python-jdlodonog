@@ -19,12 +19,12 @@ para probar las preguntas :
 python3 tests.py 01
 
 """
-   with open("data.csv", "r") as file:
+with open("data.csv", "r") as file:
     #with open("/tmp/data.csv", "r") as file: #para leer directamente en colab
     # with open("C:/Users/Usuario/Documents/GitHub/programacion-en-python-jdlodonog/data.csv", newline="") as file: # para leer en directorio local desde el github
     # with open("https://github.com/ciencia-de-los-datos/programacion-en-python-jdlodonog/blob/main/data.csv", newline="") as file: #pare leer directamente en la web
-        Datos = file.readlines()
-    Datos
+    Datos = file.readlines()
+Datos
 
 def pregunta_01():
             ## luego de cargados los datos, los abro y los cargo a la variable Datos
