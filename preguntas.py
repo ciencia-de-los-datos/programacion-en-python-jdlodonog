@@ -159,6 +159,30 @@ def pregunta_03():
 
 
 def pregunta_04():
+    from collections import Counter
+    from datetime import datetime
+    suma = Counter()
+    #El Counter puede ir agregando elementos  usando formas de diccionarios 
+
+    meses=[]
+    numeros=[]
+
+    for item in Datos: 
+        month = item[2][5:7]
+        print(month)
+        suma[month] +=1
+        print(suma)
+
+    suma=list(suma.items())
+    suma.sort()
+
+
+    for item in suma: 
+        print("{},{}".format(item[0],item[1]))   
+        meses.append(item[0])    
+        numeros.append(item[1])  
+
+    listResp4=list(zip(meses,numeros))
 
     
     """
@@ -182,7 +206,7 @@ def pregunta_04():
     ]
 
     """
-    return  
+    return  listResp4
 
 
 def pregunta_05():
