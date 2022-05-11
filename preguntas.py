@@ -241,6 +241,10 @@ def pregunta_05():
     
     datos = []
     final = []
+    letras=[]
+    listResp5=[]
+    max1=[]
+    min1=[]
     #Coge el numero y la letra y los pone en un una lista
 
     [datos.append({letra[0]:int(letra[2])}) for letra in Datos] 
@@ -258,6 +262,11 @@ def pregunta_05():
 
     for item in final: 
         print("{},{},{}".format(item[0],item[1],item[2]))
+        letras.append(item[0])
+        max1.append(item[1])
+        min1.append(item[2])
+        
+    listResp5=list(zip(letras,max1,min1))
 
     """
     Retorne una lista de tuplas con el valor maximo y minimo de la columna 2 por cada
