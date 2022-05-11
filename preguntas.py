@@ -175,6 +175,11 @@ def pregunta_03():
 
 
 def pregunta_04():
+    with open("data.csv", "r") as file:
+         Datos = file.readlines()
+    Datos   
+    Datos = [line.replace("\t", ",") for line in Datos] 
+    Datos = [line.replace("\n", "") for line in Datos]
     from collections import Counter
     from datetime import datetime
     suma = Counter()
