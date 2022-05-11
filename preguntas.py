@@ -184,7 +184,8 @@ def pregunta_04():
     numeros=[]
 
     for item in Datos: 
-        month = item[2][5:7]
+        month = item[3][5:7]
+        print("Mes"+ month)
         print(month)
         suma[month] +=1
         print(suma)
