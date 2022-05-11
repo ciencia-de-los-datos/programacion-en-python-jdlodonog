@@ -128,7 +128,7 @@ def pregunta_03():
             #print(j[0]+" - "+ j[2])            
             
             if i== j[0]:
-                print("entre en el if")
+                #print("entre en el if")
                 #valor= int(float(j[1]))
                 vfinal2.append(j[2])
                 #print(i +  "= " + j[2] ) 
@@ -143,7 +143,7 @@ def pregunta_03():
         b=[]
         b= [int(x[0]) for x in vfinal2] 
         z=sum(b)
-        print(z)
+        #print(z)
         #print("  ") 
         vfinal.append(z)
         print(i +" "+ str(z)) 
@@ -171,7 +171,7 @@ def pregunta_03():
     ]
 
     """
-    return #listaRespuesta3
+    return listaRespuesta3
 
 
 def pregunta_04():
