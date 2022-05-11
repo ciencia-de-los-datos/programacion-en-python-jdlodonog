@@ -247,14 +247,16 @@ def pregunta_05():
     min1=[]
     #Coge el numero y la letra y los pone en un una lista
 
-    [datos.append({letra[0]:int(letra[2])}) for letra in Datos] 
+    [datos.append({letra[0]:int(letra[2])}) for letra in Datos] #En esta parte lo puse en un diccionario con key letra y value numero 
     
-    print(datos)
-
+    #print(datos)
+    
+    #Para cada elemento en el diccionario si k esta en d, aca tiene que coger cada letra del diccionario 
     dict_letras  = {
         k: [d.get(k) for d in datos if k in d]
         for k in set().union(*datos)
         }
+    print(list((dict_letras)))
 
     [final.append([item[0], max(item[1]), min(item[1])]) for item in dict_letras.items()]
     final.sort()
@@ -282,7 +284,7 @@ def pregunta_05():
     ]
 
     """
-    return 
+    return listResp5
 
 
 def pregunta_06():    
