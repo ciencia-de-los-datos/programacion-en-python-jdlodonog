@@ -287,8 +287,52 @@ def pregunta_05():
     return listResp5
 
 
-def pregunta_06():    
-   
+def pregunta_06():   
+    with open("data.csv", "r") as file:
+        data2= file.readlines()
+    data2
+
+    data2 = [line.replace("\t", " ") for line in data2]
+    data2 = [line.replace("\r\n", "") for line in data2]
+    data2 = [line.split(" ") for line in data2]#se hace para separ bien los datos 
+
+
+    print(data2[:3])
+    dataSlice5 = [item[4] for item in data2]
+    print(dataSlice5)
+
+    aux = []
+    datos = []
+    final = []
+
+    letra=[]
+    max1=[]
+    min1=[]
+
+    for linea in dataSlice5:
+        linea = linea.split(',')
+        aux.append(linea)
+        for item in linea:
+            item = item.split(':')
+            #print(item)
+            datos.append({item[0]:int(item[1])})
+
+    dict_letras  = {
+        k: [d.get(k) for d in datos if k in d]
+        for k in set().union(*datos)
+        }   
+
+    [final.append([item[0],min(item[1]), max(item[1])]) for item in dict_letras.items()]
+    final.sort()
+
+    for item in final: 
+        print("{},{},{}".format(item[0],item[1],item[2]))
+        letra.append(item[0])
+        max1.append(item[1])    
+        min1.append(item[2])
+
+
+    listResp6=list(zip(letra,max1,min1))
     """
     La columna 5 codifica un diccionario donde cada cadena de tres letras corresponde a
     una clave y el valor despues del caracter `:` corresponde al valor asociado a la
