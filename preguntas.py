@@ -189,6 +189,9 @@ def pregunta_04():
     numeros=[]
 
     for item in Datos: 
+        print(item[3])
+        print(item[3][5:])
+        
         month = item[3][5:7]
         print("Mes"+ month)
         print(month)
