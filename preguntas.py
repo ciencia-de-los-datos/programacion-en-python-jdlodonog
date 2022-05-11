@@ -116,7 +116,8 @@ def pregunta_03():
         print("Letra " + i)  
         sumaLetras=0
         vfinal2=[]
-        for j in Datos:   
+        for j in Datos:  
+            print(j)
             print(j[0]+" "+ j[1])            
             
             if i== j[0]:
