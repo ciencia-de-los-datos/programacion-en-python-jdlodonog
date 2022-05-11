@@ -116,10 +116,9 @@ def pregunta_03():
         print("Letra " + i)  
         sumaLetras=0
         vfinal2=[]
-        for j in Datos:       
-            print(i[0])
-            print(j[0])
-            if i[0]== j[0]:                          
+        for j in Datos:     
+           
+            if i== j[0]:                          
                 #valor= int(float(j[1]))
                 vfinal2.append(j[1])
                 #print(i +  "= " + j[1] ) 
