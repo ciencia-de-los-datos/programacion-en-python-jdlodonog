@@ -190,10 +190,14 @@ def pregunta_04():
     numeros=[]
     
     for item1 in Datos: 
-        print(item1[3])
-        print(item1[3][5:])
+        print(item1)
+        y=item[3]
+        print(y)
+        x=item1[3][6:8]
+        print(x)
+        #print(item1[3][6:])
         
-        month = item[3][5:7]
+        month = item[3][6:8]
         #print("Mes"+ month)
         #print(month)
         suma[month] +=1
