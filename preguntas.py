@@ -122,7 +122,7 @@ def pregunta_03():
         letra.append(item[0])
         numero.append(item[1])       
 
-    listResp3=list(zip(letra,numero))
+    listResp3=list(zip(letra,int(numero)))
     print(listResp3)
     """
     Retorne la suma de la columna 2 por cada letra de la primera columna como una lista
