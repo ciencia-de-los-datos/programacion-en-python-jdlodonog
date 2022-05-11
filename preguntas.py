@@ -101,6 +101,7 @@ def pregunta_02():
 
 
 def pregunta_03():
+    """
     #letters_list = ["A", "B", "C", "D", "E"]
     letters_list= sorted(list(set([i[0] for i in Datos[0:]])))     
     print(letters_list)
@@ -142,6 +143,8 @@ def pregunta_03():
     listaRespuesta3=list(zip(letters_list, vfinal))
     print(listaRespuesta3)    
     """
+    
+    """
     Retorne la suma de la columna 2 por cada letra de la primera columna como una lista
     de tuplas (letra, suma) ordendas alfabeticamente.
 
@@ -155,7 +158,7 @@ def pregunta_03():
     ]
 
     """
-    return listaRespuesta3
+    return #listaRespuesta3
 
 
 def pregunta_04():
