@@ -103,7 +103,7 @@ def pregunta_02():
 def pregunta_03():
     
     letters_list = ["A", "B", "C", "D", "E"]
-    print(Datos[0:])
+    #print(Datos[0:])
     #letters_list= sorted(list(set([i[0] for i in Datos[0:]])))     
     print(letters_list)
     sumaLetras=0
@@ -116,9 +116,11 @@ def pregunta_03():
         print("Letra " + i)  
         sumaLetras=0
         vfinal2=[]
-        for j in Datos:     
-           
-            if i== j[0]:                          
+        for j in Datos:   
+            print(j[0]+" "+ j[1])            
+            
+            if i== j[0]:
+                print("entre en el if")
                 #valor= int(float(j[1]))
                 vfinal2.append(j[1])
                 #print(i +  "= " + j[1] ) 
