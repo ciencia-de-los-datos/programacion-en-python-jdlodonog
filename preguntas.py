@@ -175,28 +175,29 @@ def pregunta_03():
 
 
 def pregunta_04():
-    with open("data.csv", "r") as file:
-         Datos = file.readlines()
-    Datos   
-    Datos = [line.replace("\t", ",") for line in Datos] 
-    Datos = [line.replace("\n", "") for line in Datos]
     from collections import Counter
     from datetime import datetime
+    with open("data.csv", "r") as file:
+         Datos = file.readlines()
+     
+    Datos = [line.replace("\t", ",") for line in Datos] 
+    Datos = [line.replace("\n", "") for line in Datos]
+    print(Datos[3:])
     suma = Counter()
     #El Counter puede ir agregando elementos  usando formas de diccionarios 
 
     meses=[]
     numeros=[]
-
-    for item in Datos: 
-        print(item[3])
-        print(item[3][5:])
+    
+    for item1 in Datos: 
+        print(item1[3])
+        print(item1[3][5:])
         
         month = item[3][5:7]
-        print("Mes"+ month)
-        print(month)
+        "print("Mes"+ month)
+        "print(month)
         suma[month] +=1
-        print(suma)
+        "print(suma)
 
     suma=list(suma.items())
     suma.sort()
