@@ -243,7 +243,7 @@ def pregunta_05():
     final = []
     #Coge el numero y la letra y los pone en un una lista
 
-    [datos.append({letra[1]:int(letra[2])}) for letra in Datos] 
+    [datos.append({letra[0]:int(letra[2])}) for letra in Datos] 
     
     print(datos)
 
