@@ -238,7 +238,26 @@ def pregunta_04():
 
 
 def pregunta_05():
- 
+    
+    datos = []
+    final = []
+    #Coge el numero y la letra y los pone en un una lista
+
+    [datos.append({letra[1]:int(letra[2])}) for letra in Datos] 
+    
+    print(datos)
+
+    dict_letras  = {
+        k: [d.get(k) for d in datos if k in d]
+        for k in set().union(*datos)
+        }
+
+    [final.append([item[0], max(item[1]), min(item[1])]) for item in dict_letras.items()]
+    final.sort()
+
+
+    for item in final: 
+        print("{},{},{}".format(item[0],item[1],item[2]))
 
     """
     Retorne una lista de tuplas con el valor maximo y minimo de la columna 2 por cada
