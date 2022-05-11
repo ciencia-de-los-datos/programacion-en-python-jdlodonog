@@ -128,7 +128,7 @@ def pregunta_03():
         print(vfinal2)
         x=0
         b=[]
-        b= [int(x[0]for x in vfinal2] 
+        b= [int(x[0]) for x in vfinal2] 
         z=sum(b)
         print(z)
         #print("  ") 
