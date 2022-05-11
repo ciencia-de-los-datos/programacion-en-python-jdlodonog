@@ -109,7 +109,6 @@ def pregunta_03():
     
     
     
-    
     letters_list = ["A", "B", "C", "D", "E"]
     #print(Datos[0:])
     #letters_list= sorted(list(set([i[0] for i in Datos[0:]])))     
@@ -126,7 +125,7 @@ def pregunta_03():
         vfinal2=[]
         for j in Datos:  
             print(j)
-            print(j[0]+" "+ j[1])            
+            print(j[0]+" - "+ j[1])            
             
             if i== j[0]:
                 print("entre en el if")
