@@ -156,7 +156,7 @@ def pregunta_03():
     listaRespuesta3=list(zip(letters_list, vfinal))
     print(listaRespuesta3)    
     
-    
+    print("lista")
     """
     Retorne la suma de la columna 2 por cada letra de la primera columna como una lista
     de tuplas (letra, suma) ordendas alfabeticamente.
