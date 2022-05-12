@@ -540,12 +540,33 @@ def pregunta_09():
 
 
 def pregunta_10():
-    
-    with open("C:/Users/Usuario/Documents/GitHub/programacion-en-python-jdlodonog/data.csv", newline="") as file:
-        Datos4 = file.readlines()
+    with open("data.csv", "r") as file:
+        data2= file.readlines()
+    data2
 
-    Datos4 = [line.replace("\n", "") for line in Datos4] # reemplazo los \n por vacios
-    Datos4 = [line.split("\t") for line in Datos4] #separ
+    data2 = [line.replace("\t", " ") for line in data2]
+    data2 = [line.replace("\r\n", "") for line in data2]
+    data = [line.split(" ") for line in data2]#se hace para separ bien los datos 
+
+
+    dataSlice = [item[3] for item in data ]
+    dataSlice4 = [line.split(',') for line in dataSlice]
+
+    dataSlice = [item[4] for item in data ]
+    dataSlice5 = [line.split(',') for line in dataSlice]
+
+    letra=[]
+    num1=[]
+    num2=[]
+
+
+    for item, data4, data5 in zip(data, dataSlice4, dataSlice5): 
+        print((item[0], len(data4), len(data5)))
+        letra.append(item[0])
+        num1.append(len(data4))
+        num2.append(len(data5))
+
+    listResp10=list(zip(letra,num1,num2))
 
 
     """
