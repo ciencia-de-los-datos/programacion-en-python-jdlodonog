@@ -468,6 +468,54 @@ def pregunta_08():
 
 
 def pregunta_09():
+    with open("data.csv", "r") as file:
+        data2= file.readlines()
+    data2
+    
+    data2 = [line.replace("\t", " ") for line in data2]
+    data2 = [line.replace("\r\n", "") for line in data2]
+    data2 = [line.split(" ") for line in data2]#se hace para separ bien los datos 
+
+
+    print(data2[:3])
+    dataSlice5 = [item[4] for item in data2]
+    print(dataSlice5[:3])
+
+    aux = []
+    datos = []
+    letra=[]
+    numero=[]
+  
+
+    for linea in dataSlice5:
+        linea = linea.split(',')
+        aux.append(linea)
+        for item in linea:
+            item = item.split(':')
+            #print(item)
+            datos.append({item[0]:int(item[1])})
+
+    dict_letras  = {
+        k: [d.get(k) for d in datos if k in d]
+        for k in set().union(*datos)
+        }  
+
+    dict_letras
+
+    result = []
+    for item in dict_letras.items():
+        result.append((item[0], len(item[1])))
+
+    result.sort()
+    for item in result:
+        print("{},{}".format(item[0],item[1]))
+        letra.append(item[0])
+        numero.append(item[1])
+
+    
+    listResp9=list(zip(letra,numero))
+    print(listResp9)
+    dict1=dict(listResp9)
     
     """
     Retorne un diccionario que contenga la cantidad de registros en que aparece cada
