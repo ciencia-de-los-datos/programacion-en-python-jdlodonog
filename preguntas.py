@@ -589,14 +589,46 @@ def pregunta_10():
     return listResp10
 
 def pregunta_11():
-    #revisarlo todo
-    with open("C:/Users/Usuario/Documents/GitHub/programacion-en-python-jdlodonog/data.csv", newline="") as file:
-        Datos = file.readlines()
+    with open("data.csv", "r") as file:
+        data2= file.readlines()
+    data2
 
-        Datos = [line.replace("\n", "") for line in Datos] # reemplazo los \n por vacios
-        Datos = [line.split("\t") for line in Datos] #separ
+    data2 = [line.replace("\t", " ") for line in data2]
+    data2 = [line.replace("\r\n", "") for line in data2]
+    data = [line.split(" ") for line in data2]#se hace para separ bien los datos 
+
+
+    dataSlice = [item[3] for item in data ]
+    dataSlice4 = [line.split(',') for line in dataSlice]
+
+    dataSlice = [item[4] for item in data ]
+    dataSlice5 = [line.split(',') for line in dataSlice]
+
+    letra11=[]
+    num1=[]
+    
+    dataSlice = [item[3] for item in data ]
+    dataSlice4 = [line.split(',') for line in dataSlice]
+
+    from collections import Counter  
+    suma = Counter() 
+    
+    for valor, letras in zip(data, dataSlice4): 
+        for letra in letras:
+            suma[letra] += int(valor[1])
+
+    suma=list(suma.items())
+    suma.sort()
+
+    for item in suma: 
+        print("{},{}".format(item[0],item[1]))
+        letra11.append(item[0])
+        num1.append(item[1])
+
  
-
+    listResp11=list(zip(letra11,num1))
+    print(listResp11)
+    dict11=dict(listResp11)
     """
     Retorne un diccionario que contengan la suma de la columna 2 para cada letra de la
     columna 4, ordenadas alfabeticamente.
