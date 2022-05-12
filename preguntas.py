@@ -358,6 +358,35 @@ def pregunta_06():
 
 
 def pregunta_07():
+    with open("data.csv", "r") as file:
+        data2= file.readlines()
+    data2
+
+
+    data2 = [line.replace("\t", " ") for line in data2]
+    data2 = [line.replace("\r\n", "") for line in data2]
+    data2 = [line.split(" ") for line in data2]#se hace para separ bien los datos 
+
+    datos = []
+
+    numero=[]
+    lista=[]
+    [datos.append({letra[1]:letra[0]}) for letra in data2] 
+
+    dict_letras  = {
+        k: [d.get(k) for d in datos if k in d]
+        for k in set().union(*datos)
+    }
+
+    result = sorted(tuple(dict_letras.items()))
+
+    for item in result: 
+        print(item)
+        numero.append(int(item[0]))
+        lista.append(item[1])
+
+    listResp7=list(zip(numero,lista))
+    print(listResp7
 
 
     """
