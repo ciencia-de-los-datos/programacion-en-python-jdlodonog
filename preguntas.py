@@ -586,7 +586,7 @@ def pregunta_10():
 
 
     """
-    return 
+    return listResp10
 
 def pregunta_11():
     #revisarlo todo
