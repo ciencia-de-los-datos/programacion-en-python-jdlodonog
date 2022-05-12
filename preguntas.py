@@ -386,7 +386,7 @@ def pregunta_07():
         lista.append(item[1])
 
     listResp7=list(zip(numero,lista))
-    print(listResp7
+    print(listResp7)
 
 
     """
