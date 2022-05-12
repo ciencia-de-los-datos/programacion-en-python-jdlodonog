@@ -413,7 +413,36 @@ def pregunta_07():
 
 
 def pregunta_08():
+    with open("data.csv", "r") as file:
+        data2= file.readlines()
+    data2
 
+    data2 = [line.replace("\t", " ") for line in data2]
+    data2 = [line.replace("\r\n", "") for line in data2]
+    data2 = [line.split(" ") for line in data2]#se hace para separ bien los datos 
+
+    datos = []
+    numero=[]
+    lista=[]
+
+    #crea un diccionario con clave el numero y como valor la letra
+    [datos.append({letra[1]:letra[0]}) for letra in data2] 
+
+    dict_letras  = {
+        k: [d.get(k) for d in datos if k in d]
+        for k in set().union(*datos)
+    }
+
+    result = sorted(tuple(dict_letras.items()))
+
+    for item in result: 
+        print((item[0],sorted(set(item[1]))))
+        numero.append(int(item[0]))
+        lista.append(sorted(set(item[1])))
+
+    listResp8=list(zip(numero,lista))
+    print(listResp8)
+    
     """
     Genere una lista de tuplas, donde el primer elemento de cada tupla contiene  el valor
     de la segunda columna; la segunda parte de la tupla es una lista con las letras
