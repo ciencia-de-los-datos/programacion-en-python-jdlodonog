@@ -477,9 +477,9 @@ def pregunta_09():
     data2 = [line.split(" ") for line in data2]#se hace para separ bien los datos 
 
 
-    print(data2[:3])
+    #print(data2[:3])
     dataSlice5 = [item[4] for item in data2]
-    print(dataSlice5[:3])
+    #print(dataSlice5[:3])
 
     aux = []
     datos = []
