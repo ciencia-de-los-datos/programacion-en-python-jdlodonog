@@ -409,7 +409,7 @@ def pregunta_07():
     ]
 
     """
-    return 
+    return listResp7
 
 
 def pregunta_08():
