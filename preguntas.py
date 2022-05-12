@@ -654,9 +654,9 @@ def pregunta_12():
     print("")
     print("Pregunta 12")
 
-   
-    with open("C:/Users/Usuario/Documents/GitHub/programacion-en-python-jdlodonog/data.csv", newline="") as file:
-         Datos2 = file.readlines()
+    with open("data.csv", "r") as file:
+        data2= file.readlines()
+    Datos2=data2
 
     #Datos2 = [line.replace("\t", ";") for line in Datos2] # reemplazo los \t por comas
 
